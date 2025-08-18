@@ -76,27 +76,62 @@
 
 
 
+
   <!-- Hero Section -->
-  <section class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-10 mt-4 rounded-lg overflow-hidden relative">
-    <div
-      class="flex flex-col md:flex-row items-center bg-gradient-to-r from-white to-gray-100 rounded-lg shadow-lg overflow-hidden">
-      <div class="flex-1 px-6 py-10 md:py-16">
-        <h1 class="font-extrabold text-3xl md:text-5xl leading-tight mb-4">
-          What can we help you with?
-        </h1>
-        <form class="mt-6 max-w-lg">
-          <label class="sr-only" for="search">Search</label>
-          <input
-            class="w-full border border-gray-300 rounded-full py-3 px-5 text-sm placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 shadow-sm"
-            id="search" placeholder="Type your questions or issue here..." type="search" />
-        </form>
+<section
+  class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-10 mt-4 rounded-lg overflow-hidden relative"
+>
+  <div
+    class="flex flex-col md:flex-row items-center bg-gradient-to-r from-white to-gray-100 rounded-lg shadow-lg overflow-hidden"
+  >
+    <!-- Left Side Content -->
+    <div class="flex-1 px-6 py-10 md:py-16 text-center md:text-left">
+      <h1 class="font-extrabold text-3xl md:text-5xl leading-tight mb-4">
+        What can we help you with?
+      </h1>
+
+      <!-- Responsive Call Now Button -->
+      <div class="mt-6">
+        <a
+          onclick="callNow()"
+          class="flex md:inline-flex items-center justify-center bg-yellow-400 text-black 
+                 px-4 py-2 text-sm md:px-6 md:py-4 md:text-lg 
+                 rounded-full font-semibold md:font-bold shadow-md 
+                 hover:bg-yellow-300 transition w-full md:w-auto"
+        >
+          <i class="fas fa-phone-alt mr-2 md:mr-3"></i>
+          Call Now: <span class="ml-1 md:ml-2">+1-888-274-1480</span>
+        </a>
       </div>
-      <div class="flex-1">
-        <img alt="Woman support agent smiling" class="w-full h-full object-cover"
-          src="https://storage.googleapis.com/a1aa/image/0ead8542-1a5a-44bc-7cf8-246bff59f82b.jpg" />
-      </div>
+
+      <!-- Search Form -->
+      <form class="mt-8 max-w-lg mx-auto md:mx-0">
+        <label class="sr-only" for="search">Search</label>
+        <input
+          class="w-full border border-gray-300 rounded-full py-2 md:py-3 px-4 md:px-5 
+                 text-sm placeholder:text-gray-500 
+                 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 shadow-sm"
+          id="search"
+          placeholder="Type your questions or issue here..."
+          type="search"
+        />
+      </form>
     </div>
-  </section>
+
+    <!-- Right Side Image -->
+    <div class="flex-1">
+      <img
+        alt="Woman support agent smiling"
+        class="w-full h-full object-cover"
+        src="https://storage.googleapis.com/a1aa/image/0ead8542-1a5a-44bc-7cf8-246bff59f82b.jpg"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+
 
   <!-- Upgrade Section -->
   <section
@@ -230,7 +265,7 @@
 
 
 
-    const menuToggle = document.getElementById("menuToggle");
+  const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
 
   menuToggle.addEventListener("click", () => {
